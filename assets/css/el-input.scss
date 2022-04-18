@@ -1,0 +1,7 @@
+.el-input {
+  &__inner {
+    &:focus {
+      border-color: var(--qur-green);
+    }
+  }
+}

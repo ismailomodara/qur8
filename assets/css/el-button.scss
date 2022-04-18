@@ -1,0 +1,12 @@
+.el-button {
+  &--primary {
+    background-color: var(--qur-green);
+    border-color: var(--qur-green);
+
+    &:hover,
+    &:focus {
+      background-color: var(--qur-green);
+      border-color: var(--qur-green);
+    }
+  }
+}
