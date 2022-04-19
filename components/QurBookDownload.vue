@@ -180,4 +180,27 @@ export default {
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 1024px) {
+  .el-dialog {
+    width: 70% !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .el-dialog {
+    width: 92% !important;
+  }
+
+  .book {
+    flex-direction: column;
+
+    .image {
+      text-align: center;
+    }
+    .form {
+      margin-left: 0;
+    }
+  }
+}
 </style>
