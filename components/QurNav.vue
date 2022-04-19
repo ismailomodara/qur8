@@ -9,7 +9,7 @@
         <li>Books</li>
       </ul>
     </div>
-    <div class='qur-nav--search'>
+    <div v-if='false' class='qur-nav--search'>
       <el-input v-model='query' type='text' placeholder='Search for book' prefix-icon='el-icon-search' />
     </div>
   </div>
@@ -30,11 +30,12 @@ export default {
 .qur-nav {
   padding: 20px 0;
   width: 100%;
-  background: var(--qur-white);
+  background: var(--qur-white-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin-bottom: 50px;
+  position: relative;
 
   &--logo {
     img {
@@ -44,7 +45,11 @@ export default {
   }
 
   &--routes {
-   ul {
+    //position: absolute;
+    //left: 45%;
+    //transform: translateX(-50%);
+
+    ul {
      margin: 0;
      padding: 0;
      list-style-type: none;
@@ -75,6 +80,22 @@ export default {
        }
      }
    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+    align-items: flex-start;
+
+    &--routes {
+      //right: 0;
+      //left: unset;
+      //transform: unset;
+    }
+
+    &--search {
+      margin-top: 20px;
+      width: 100%;
+    }
   }
 }
 </style>

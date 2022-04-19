@@ -3,10 +3,10 @@
     <div class='qur-hero--text'>
       <h1>Stories in Islam</h1>
       <p>Learn about stories in Islam, through educative and exciting comics.</p>
-      <el-button type='primary' size='small'>View all</el-button>
+      <el-button class='el-button--white' size='medium' plain>Explore</el-button>
     </div>
     <div class='qur-hero--image'>
-      <img src='@/assets/images/read.svg'  alt='Read' />
+      <img src='@/assets/images/read-i.svg'  alt='Read' />
     </div>
   </div>
 </template>
@@ -19,7 +19,7 @@ export default {
 
 <style lang='scss' scoped>
 .qur-hero {
-  background: #FEEFE5;
+  background: var(--qur-green);
   border-radius: 20px;
   min-height: 300px;
   padding: 40px;
@@ -31,19 +31,21 @@ export default {
 
   &--text {
     margin-left: 40px;
-    max-width: 40%;
+    width: 40%;
 
     h1 {
       font-size: 2.25rem;
       line-height: 1;
-      color: var(--qur-green);
+      color: var(--qur-white);
       margin: 0 0 10px;
     }
 
     p {
-      color: #141414;
+      color: var(--qur-white);
       opacity: 0.8;
       line-height: 1.8;
+      font-weight: 500;
+      margin-bottom: 20px;
     }
   }
 
@@ -55,6 +57,29 @@ export default {
     img {
       height: 300px;
       width: auto;
+    }
+  }
+
+  @media (max-width: 1024px) {
+    &--text {
+      margin-left: 0;
+    }
+  }
+
+  @media (max-width: 600px) {
+    flex-direction: column;
+
+    &--text {
+      width: 100%;
+    }
+
+    &--image {
+      position: relative;
+      bottom: -50px;
+
+      img {
+        height: 220px;
+      }
     }
   }
 }
