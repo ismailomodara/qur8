@@ -1,29 +1,31 @@
 <template>
   <div>
     <div class='qur-books'>
-      <div class='qur-books--header'>
+      <div class='qur-books--header' data-aos="fade-up">
         <h2>Trending Now</h2>
       </div>
       <div class='qur-books--list'>
         <el-row type='flex' :gutter='30' class='flex-wrap'>
           <el-col v-for='(book, index) in books' :key='book.id' :sm="12" :md='8'>
-            <qur-book :book='book' @download='download(index)' />
+            <qur-book :book='book' data-aos="fade-up" @download='download(index)' />
           </el-col>
         </el-row>
       </div>
     </div>
-    <paystack-modal v-if='false' :book='selectedBook' />
+    <qur-book-download :show.sync='downloadBook' :book='selectedBook' />
   </div>
 </template>
 
 <script>
 import QurBook from './QurBook'
-import PaystackModal from './Paystack'
+import QurBookDownload from './QurBookDownload';
+
 export default {
   name: 'QurBooks',
-  components: { PaystackModal, QurBook },
+  components: { QurBookDownload, QurBook },
   data() {
     return {
+      downloadBook: false,
       selectedBook: {},
       books: [
         {
@@ -56,6 +58,7 @@ export default {
   methods: {
     download(index) {
       this.selectedBook = { ...this.books[index] }
+      this.downloadBook = true;
     }
   }
 }

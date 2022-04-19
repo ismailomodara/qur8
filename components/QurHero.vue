@@ -1,11 +1,11 @@
 <template>
-  <div class='qur-hero'>
-    <div class='qur-hero--text'>
+  <div class='qur-hero' data-aos="fade-in">
+    <div class='qur-hero--text' data-aos='fade-up' data-aos-delay='200'>
       <h1>Stories in Islam</h1>
       <p>Learn about stories in Islam, through educative and exciting comics.</p>
       <el-button class='el-button--white' size='medium' plain>Explore</el-button>
     </div>
-    <div class='qur-hero--image'>
+    <div class='qur-hero--image' data-aos="zoom-in-left" data-aos-delay='200'>
       <img src='@/assets/images/read-i.svg'  alt='Read' />
     </div>
   </div>

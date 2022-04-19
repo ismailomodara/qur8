@@ -1,4 +1,4 @@
 import Vue from 'vue'
 import Paystack from 'vue-paystack';
 
-Vue.use(Paystack)
+Vue.component('PayStack', Paystack)

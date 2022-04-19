@@ -30,7 +30,6 @@ export default {
 .qur-nav {
   padding: 20px 0;
   width: 100%;
-  background: var(--qur-white-bg);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -45,6 +44,8 @@ export default {
   }
 
   &--routes {
+    display: flex;
+    align-items: center;
     //position: absolute;
     //left: 45%;
     //transform: translateX(-50%);
@@ -83,9 +84,6 @@ export default {
   }
 
   @media (max-width: 600px) {
-    flex-direction: column;
-    align-items: flex-start;
-
     &--routes {
       //right: 0;
       //left: unset;

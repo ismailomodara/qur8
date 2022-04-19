@@ -1,7 +1,7 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'qur8',
+    title: 'Qur8',
     htmlAttrs: {
       lang: 'en',
     },
@@ -11,14 +11,14 @@ export default {
       { hid: 'description', name: 'description', content: '' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ['element-ui/lib/theme-chalk/index.css', "~/assets/css/main.scss"],
+  css: ['element-ui/lib/theme-chalk/index.css', "@/assets/css/main.scss"],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/element-ui', { src: '~/plugins/payment', ssr: false }],
+  plugins: ['@/plugins/element-ui', { src: '@/plugins/payment', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
