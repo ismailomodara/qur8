@@ -88,7 +88,7 @@ export default {
         last_name: "",
         email: ""
       },
-      paystackKey: "pk_test_23410052635616385dc547e4f1790f59052cf56048",
+      paystackKey: process.env.PAYSTACK_KEY_TEST,
     }
   },
   computed: {

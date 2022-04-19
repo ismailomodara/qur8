@@ -1,7 +1,19 @@
 @import "el-button";
 @import "el-input";
 
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/DMSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../fonts/DMSans-Medium.woff') format('woff');
+}
 
 * {
   box-sizing: border-box;
@@ -12,7 +24,6 @@
   --qur-white: #FFFFFF;
   --qur-white-bg: #fafafa;
 }
-
 
 html, body {
   background: var(--qur-white-bg);
