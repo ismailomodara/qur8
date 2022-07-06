@@ -8632,6 +8632,11 @@ vue-paystack@^2.0.4:
   dependencies:
     vue "^2.6.7"
 
+vue-pdf-embed@^1.1.4:
+  version "1.1.4"
+  resolved "https://registry.yarnpkg.com/vue-pdf-embed/-/vue-pdf-embed-1.1.4.tgz#80a95c313ffc4f76c14d9c90ca28c567d5469729"
+  integrity sha512-d4c7nM3LneWUiL4MssIyPHfGgVMRPh4Z7UgLsXMZ+lbAtH/6SBUFHdzZQLY2BASdh16BM/v6YCbmtQU+KIQdrg==
+
 vue-router@^3.5.1:
   version "3.5.3"
   resolved "https://registry.yarnpkg.com/vue-router/-/vue-router-3.5.3.tgz#041048053e336829d05dafacf6a8fb669a2e7999"

@@ -7,25 +7,25 @@
       <div class='qur-books--list'>
         <el-row type='flex' :gutter='30' class='flex-wrap'>
           <el-col v-for='(book, index) in books' :key='book.id' :sm="12" :md='8'>
-            <qur-book :book='book' data-aos="fade-up" @download='download(index)' />
+            <qur-book :book='book' data-aos="fade-up" @preview='preview(index)' />
           </el-col>
         </el-row>
       </div>
     </div>
-    <qur-book-download :show.sync='downloadBook' :book='selectedBook' />
+    <qur-book-preview :show.sync='previewBook' :book='selectedBook' />
   </div>
 </template>
 
 <script>
 import QurBook from './QurBook'
-import QurBookDownload from './QurBookDownload';
+import QurBookPreview from './QurBookPreview';
 
 export default {
   name: 'QurBooks',
-  components: { QurBookDownload, QurBook },
+  components: { QurBookPreview, QurBook },
   data() {
     return {
-      downloadBook: false,
+      previewBook: false,
       selectedBook: {},
       books: [
         {
@@ -34,7 +34,8 @@ export default {
           title: 'Bilal',
           series: 'Sahaba - The Series',
           intro: 'Lorem ipsum dolor sit amet, consectetur aipiscing elit. Accumsan ipsum tincidunt facilisi luctus assa.',
-          price: 5000
+          price: 1000,
+          download: "https://paystack.com/buy/sahaba-series-bilal"
         },
         {
           id: 'umar-bin-al-khattab',
@@ -42,7 +43,8 @@ export default {
           title: 'Umar Bin Al-Khattab',
           series: 'Sahaba - The Series',
           intro: 'Lorem ipsum dolor sit amet, consectetur aipiscing elit. Accumsan ipsum tincidunt facilisi luctus assa.',
-          price: 5000
+          price: 1000,
+          download: "https://paystack.com/buy/sahaba-series-umar"
         },
         {
           id: 'abu-bakr',
@@ -50,15 +52,16 @@ export default {
           title: 'Abu Bakr',
           series: 'Sahaba - The Series',
           intro: 'Lorem ipsum dolor sit amet, consectetur aipiscing elit. Accumsan ipsum tincidunt facilisi luctus assa.',
-          price: 5000
+          price: 1000,
+          download: 'https://paystack.com/buy/sahaba-series-abu-bakr'
         }
       ]
     }
   },
   methods: {
-    download(index) {
+    preview(index) {
       this.selectedBook = { ...this.books[index] }
-      this.downloadBook = true;
+      this.previewBook = true;
     }
   }
 }

@@ -17,12 +17,8 @@ export default {
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: ['element-ui/lib/theme-chalk/index.css', "@/assets/css/main.scss"],
 
-  env: {
-    PAYSTACK_KEY_TEST: 'pk_test_23410052635616385dc547e4f1790f59052cf56048'
-  },
-
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: ['@/plugins/element-ui', { src: '@/plugins/payment', ssr: false }],
+  plugins: ['@/plugins/element-ui', { src: '@/plugins/vuepdf', ssr: false }],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,

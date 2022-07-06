@@ -3,8 +3,14 @@
     <div class='qur-book--image'>
       <img :src='require(`~/assets/images/books/${book.cover}`)' :alt='book.title' data-aos="zoom-in" data-aos-delay="200"/>
     </div>
-    <div class='qur-book--action' @click="$emit('download')">
-      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/></svg>    </div>
+    <div class='qur-book--actions'>
+      <el-button size='small' @click='preview'>Preview</el-button>
+      <span class='download' @click='download'>
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M3 15v4c0 1.1.9 2 2 2h14a2 2 0 0 0 2-2v-4M17 9l-5 5-5-5M12 12.8V2.5"/>
+      </svg>
+      </span>
+    </div>
   </div>
 </template>
 
@@ -19,6 +25,14 @@ export default {
   },
   data() {
     return {}
+  },
+  methods: {
+    preview() {
+      this.$emit('preview');
+    },
+    download() {
+      window.open(this.book.download);
+    }
   }
 }
 </script>
@@ -31,6 +45,7 @@ export default {
   -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
   box-shadow: 0 0 30px 0 rgb(82 63 105 / 5%);
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin-bottom: 30px;
@@ -40,7 +55,7 @@ export default {
   &--image {
     text-align: center;
     height: auto;
-    width: 90%;
+    width: 80%;
     -webkit-box-shadow: 0 0 30px 0 rgb(82 63 105 / 20%);
     box-shadow: 0 0 30px 0 rgb(82 63 105 / 20%);
 
@@ -52,12 +67,17 @@ export default {
     }
   }
 
-  &--action {
-    position: absolute;
-    right: 20px;
-    bottom: 20px;
-    height: 36px;
-    width: 36px;
+  &--actions {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  span {
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
     border-radius: 100px;
     background: var(--qur-green);
     display: flex;
