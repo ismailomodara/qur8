@@ -96,11 +96,25 @@ export default {
   margin-top: 30px;
   display: flex;
   justify-content: flex-end;
+
+  .mobile-nav {
+    display: none;
+  }
 }
 
 @media (max-width: 1024px) {
   .el-dialog {
-    width: 70% !important;
+    width: 80% !important;
+  }
+
+  .vue-pdf-embed {
+    height: auto !important;
+    width: 100% !important;
+
+    canvas {
+      height: auto !important;
+      width: 100% !important
+    }
   }
 }
 
@@ -134,6 +148,10 @@ export default {
 
   .actions {
     justify-content: space-between;
+
+    .mobile-nav {
+      display: flex;
+    }
   }
 }
 </style>
