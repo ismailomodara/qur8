@@ -53,7 +53,7 @@ export default {
           series: 'Sahaba - The Series',
           intro: 'Lorem ipsum dolor sit amet, consectetur aipiscing elit. Accumsan ipsum tincidunt facilisi luctus assa.',
           price: 1000,
-          download: 'https://paystack.com/buy/sahaba-series-abu-bakr'
+          download: 'https://www.amazon.com/dp/B0BMM5HHP8'
         }
       ]
     }
