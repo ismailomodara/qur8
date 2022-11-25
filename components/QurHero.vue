@@ -27,7 +27,7 @@ export default {
   align-items: center;
   position: relative;
   overflow: hidden;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
 
   &--text {
     margin-left: 40px;

@@ -1,16 +1,18 @@
 <template>
   <div class='qur-nav'>
-    <div class='qur-nav--logo'>
-      <img src="@/assets/images/qur-logo.png" alt />
+    <div>
+      <div class='qur-nav--logo'>
+        <img src="@/assets/images/qur-logo.png" alt />
+      </div>
+      <div class='qur-nav--routes'>
+        <ul>
+          <li class='active'>Home</li>
+        </ul>
+      </div>
     </div>
-    <div class='qur-nav--routes'>
-      <ul>
-        <li class='active'>Home</li>
-        <li>Books</li>
-      </ul>
-    </div>
-    <div v-if='false' class='qur-nav--search'>
-      <el-input v-model='query' type='text' placeholder='Search for book' prefix-icon='el-icon-search' />
+    <div class='qur-nav--search'>
+      <a href="mailto:hello@qur8.com">hello@qur8.com</a>
+      <el-input v-if="false" v-model='query' type='text' placeholder='Search for book' prefix-icon='el-icon-search' />
     </div>
   </div>
 </template>
@@ -36,6 +38,11 @@ export default {
   margin-bottom: 50px;
   position: relative;
 
+  > div:first-child {
+    display: flex;
+    align-items: center;
+  }
+
   &--logo {
     img {
       height: 40px;
@@ -46,9 +53,7 @@ export default {
   &--routes {
     display: flex;
     align-items: center;
-    //position: absolute;
-    //left: 45%;
-    //transform: translateX(-50%);
+    margin-left: 20px;
 
     ul {
      margin: 0;
@@ -83,13 +88,14 @@ export default {
    }
   }
 
-  @media (max-width: 600px) {
-    &--routes {
-      //right: 0;
-      //left: unset;
-      //transform: unset;
+  &--search {
+    a {
+      color: var(--qur-green);
+      font-weight: 500;
     }
+  }
 
+  @media (max-width: 600px) {
     &--search {
       margin-top: 20px;
       width: 100%;

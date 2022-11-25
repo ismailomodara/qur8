@@ -35,7 +35,7 @@ export default {
           series: 'Sahaba - The Series',
           intro: 'Lorem ipsum dolor sit amet, consectetur aipiscing elit. Accumsan ipsum tincidunt facilisi luctus assa.',
           price: 1000,
-          download: "https://paystack.com/buy/sahaba-series-bilal"
+          download: null
         },
         {
           id: 'umar-bin-al-khattab',
@@ -44,7 +44,7 @@ export default {
           series: 'Sahaba - The Series',
           intro: 'Lorem ipsum dolor sit amet, consectetur aipiscing elit. Accumsan ipsum tincidunt facilisi luctus assa.',
           price: 1000,
-          download: "https://paystack.com/buy/sahaba-series-umar"
+          download: null
         },
         {
           id: 'abu-bakr',

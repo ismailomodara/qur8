@@ -2,6 +2,7 @@
   <div class='qur-container qur-home'>
     <qur-nav />
     <qur-hero />
+    <qur-intro />
     <qur-books />
   </div>
 </template>
@@ -10,13 +11,16 @@
 import AOS from "aos";
 import QurNav from '../components/QurNav';
 import QurHero from '../components/QurHero'
+import QurIntro from '../components/QurIntro'
 import QurBooks from '../components/QurBooks'
 
 import "aos/dist/aos.css";
 
 export default {
   name: 'IndexPage',
-  components: { QurBooks, QurHero, QurNav },
+  components: {
+    QurNav, QurHero, QurIntro, QurBooks
+  },
   mounted() {
     AOS.init({
       offset: 60,

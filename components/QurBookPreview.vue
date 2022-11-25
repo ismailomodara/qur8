@@ -13,7 +13,7 @@
           <el-button icon="el-icon-arrow-left" :disabled='page === 1' circle @click='prev'></el-button>
           <el-button icon="el-icon-arrow-right" :disabled='page === pages' circle @click='next'></el-button>
         </div>
-        <el-button type="primary" size='medium' @click="download">Download</el-button>
+        <el-button v-if="book.download" type="primary" size='medium' @click="download">Download</el-button>
       </div>
     </el-dialog>
 
