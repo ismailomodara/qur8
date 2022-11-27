@@ -50,21 +50,18 @@ export default {
 
   &--description {
     width: 70%;
-    background: #f4f8f8;
+    background: #3f3d56;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
     p {
-      color: var(--qur-black);
+      color: #fff;
       opacity: 0.8;
       line-height: 1.8;
-      font-weight: 500;
-      margin-bottom: 20px;
 
       span {
-        color: var(--qur-green);
         font-weight: 600;
       }
     }
