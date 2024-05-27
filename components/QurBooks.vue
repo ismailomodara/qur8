@@ -35,7 +35,7 @@ export default {
           series: 'Sahaba - The Series',
           intro: 'Lorem ipsum dolor sit amet, consectetur aipiscing elit. Accumsan ipsum tincidunt facilisi luctus assa.',
           price: 1000,
-          download: null
+          download: "https://www.amazon.com/dp/B0BNQYLW4D"
         },
         {
           id: 'umar-bin-al-khattab',
